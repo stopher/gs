@@ -1,0 +1,166 @@
+{
+  "gameId": 1,
+  "name": "Klasse 1B Alta",
+  "created": "2015-03-25T12:00:00Z",
+  "clients" : [
+    {
+      "id": "mobil0",
+      "state" : "part1-1",
+      "status" : "ONLINE"
+    },
+    {
+      "id": "mobil1",
+      "state" : "part1-1",
+      "status" : "OFFLINE"
+    },
+    {
+      "id": "mobil2",
+      "state" : "part1-1",
+      "status" : "ONLINE"
+    },
+    {
+      "id": "mobil3",
+      "state" : "part1-2",
+      "status" : "ONLINE"
+    },
+    {
+      "id": "gruppestasjon1",
+      "state" : "part1-2",
+      "status" : "ONLINE"
+    },
+    {
+      "id": "gruppestasjon2",
+      "state" : "part1-2",
+      "status" : "ONLINE"
+    }
+  ],
+  "groups": [
+    {
+      "id": 0,
+      "name": "Gruppe 1",
+      "assets": [
+        {
+          "filename": "http://fileserver/avatar1.jpg"
+        }
+      ],
+      "players": [
+        "player1",
+        "player2"
+      ],
+      "score": 50,
+      "currentState": "gruppeoppgave1"
+    },
+    {
+      "name": "Gruppe 2",
+      "assets": [
+        {
+          "filename": "http://fileserver/avatar2.jpg"
+        }
+      ],
+      "players": [
+        "player3",
+        "player4"
+      ],
+      "score": 35,
+      "currentState": "gruppeoppgave2"
+    }
+  ],
+  "players": [
+    {
+      "id": "player1",
+      "name": "Per",
+      "group": 0,
+      "score": 20,
+      "assets": [
+        {
+          "filename": "http://fileserver/avatar3.jpg"
+        }
+      ],
+      "mobileID": "mobil0",
+      "history": [
+        {
+          "id": "oppgave2_3",
+          "name": "Oppgave 1",
+          "score": 10
+        },
+        {
+          "name": "Oppgave 2",
+          "score": 10,
+          "id": "oppgave2_2"
+        }
+      ]
+    },
+    {
+      "id": "player2",
+      "name": "Kalle",
+      "group": 0,
+      "score": 30,
+      "assets": [
+        {
+          "filename": "http://fileserver/avatar4.jpg"
+        }
+      ],
+      "mobileID": "mobil1",
+      "history": [
+        {
+          "id": "oppgave2_3",
+          "name": "Oppgave 1",
+          "score": 10
+        },
+        {
+          "id": "oppgave2_2",
+          "name": "Oppgave 2",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "player3",
+      "name": "Chris",
+      "group": 1,
+      "score": 22,
+      "assets": [
+        {
+          "filename": "http://fileserver/avatar5.jpg"
+        }
+      ],
+      "mobileID": "mobil2",
+      "history": [
+        {
+          "id": "oppgave2_3",
+          "name": "Oppgave 1",
+          "score": 11
+        },
+        {
+          "id": "oppgave2_2",
+          "name": "Oppgave 2",
+          "score": 11
+        }
+      ]
+    },
+    {
+      "id": "player4",
+      "name": "Kalle",
+      "score": 24,
+      "assets": [
+        {
+          "filename": "http://fileserver/avatar6.jpg"
+        }
+      ],
+      "group": 1,
+      "mobileID": "mobil3",
+      "history": [
+        {
+          "id": "oppgave2_3",
+          "name": "Oppgave 1",
+          "score": 12
+        },
+        {
+          "id": "oppgave2_2",
+          "name": "Oppgave 2",
+          "score": 12
+        }
+      ]
+    }
+  ]
+}
