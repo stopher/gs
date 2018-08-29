@@ -8,6 +8,7 @@ var json = JSON.parse(fs.readFileSync('./currentState.json', 'utf8'));
 
 const clients = [];
 const currentState = json;
+const port = process.env.PORT || 8080;        // set our port
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
@@ -26,15 +27,11 @@ io.on('connection', function(socket){
 	  });
 });
 
-http.listen(3001, function(){
-  console.log('listening on *:3001');
+http.listen(port, function(){
+  console.log('listening on *:'+port);
 });
 
-const updateClients = schedule.scheduleJob('*/5 * * * * *', function(fireDate){
+const updateClients = schedule.scheduleJob('*/30 * * * * *', function(fireDate){
   console.log("Broadcasting currentState");
   io.emit('currentState message', json);
-  /*clients.forEach(x => {
-
-  });
-  */
 });

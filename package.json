@@ -1,6 +1,8 @@
 {
   "name": "no.back.alta.spillserver",
   "version": "0.0.1",
+  "main" : "index.js",
+  "private": true,
   "description": "Spillserver for Alta",
   "dependencies": {
     "express": "^4.15.2",
