@@ -1,10 +1,11 @@
-const app = require('express')();
+const express = require('express');
+const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const schedule = require('node-schedule');
 
-var fs = require('fs');
-var json = JSON.parse(fs.readFileSync('./currentState.json', 'utf8'));
+const fs = require('fs');
+const json = JSON.parse(fs.readFileSync('./currentState.json', 'utf8'));
 
 const clients = [];
 const currentState = json;
@@ -13,6 +14,8 @@ const port = process.env.PORT || 8080;        // set our port
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/build/index.html');
 });
+
+app.use(express.static('build/static'))
 
 io.on('connection', function(socket){
 	clients.push(socket);
