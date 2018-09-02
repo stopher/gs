@@ -10,12 +10,14 @@ const json = JSON.parse(fs.readFileSync('./currentState.json', 'utf8'));
 const clients = [];
 const currentState = json;
 const port = process.env.PORT || 8080;        // set our port
+const path = require('path');
+const publicDir = path.join(__dirname, 'public');
 
 app.get('/', function(req, res){
-  res.sendFile(__dirname + '/build/index.html');
+  res.sendFile(path.join(public, 'index.html'));
 });
 
-app.use(express.static('build/static'))
+app.use('/', express.static(publicDir));
 
 io.on('connection', function(socket){
 	clients.push(socket);
